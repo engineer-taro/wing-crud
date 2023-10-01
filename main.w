@@ -57,7 +57,7 @@ api.post("/users", inflight (request: cloud.ApiRequest): cloud.ApiResponse => {
   }
 
   // bodyがない場合
-  // NOTE: 本来bodyがない場合をバリデーションで取り除きたかったが、型推論が効かないため書きづらくこのようにした
+  // NOTE: 本来bodyがない場合をバリデーションで取り除きたかったが、型推論が効かないため書きづらく最後に持ってきた
   return cloud.ApiResponse {
     status: 400,
     body: "request body required."
